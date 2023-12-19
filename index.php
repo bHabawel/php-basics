@@ -33,4 +33,12 @@
         "age" => 21,
         "city" => "Baguio City"
     );
+
+    function addNumbers($x, $y){
+        $sum = $x + $y;
+        return "The sum of " . $x . " and " . $y . " is " . $sum;
+    }
+
+    echo "<br/>" . addNumbers(4, 3);
+    echo "<br/>" . addNumbers(7, 8);
 ?>
