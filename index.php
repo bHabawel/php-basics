@@ -27,10 +27,5 @@
         $counter2--;
     }
 
-    $fruitsArr = array("Apple", "Orange", "Grapes");
-    $personInfo = array(
-        "name" => "Brent",
-        "age" => 21,
-        "city" => "Baguio City"
-    );
+    
 ?>
