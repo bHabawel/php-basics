@@ -15,4 +15,22 @@
         echo $num1 . " is less than " . 10;
     }
 
+    for($counter1 = 1; $counter1 <= 5; $counter1++){
+        echo "<br/>";
+        echo $counter1;
+    }
+
+    $counter2 = 5;
+    while($counter2 > 0 ){
+        echo "<br/>";
+        echo $counter2;
+        $counter2--;
+    }
+
+    $fruitsArr = array("Apple", "Orange", "Grapes");
+    $personInfo = array(
+        "name" => "Brent",
+        "age" => 21,
+        "city" => "Baguio City"
+    );
 ?>
