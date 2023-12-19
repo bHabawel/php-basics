@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     $fName = "Brent";
     $num1 = 1;
     $isFinished = false;
@@ -41,4 +42,34 @@
 
     echo "<br/>" . addNumbers(4, 3);
     echo "<br/>" . addNumbers(7, 8);
+
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Form Handling</title>
+</head>
+<body>
+    <h1 class="fw-bold text-center">Simple Form Handling</h1>
+    <form class="container-fluid my-3 border shadow" method="POST" action="newNames.php">
+        <label class="form-label">Add a new name:</label>
+        <input class="form-control" id="name" type="text" name="name" placeholder="Enter a name..." required/>
+        <button class="btn btn-dark my-3" type="submit">Add</button>
+        <ul>
+            <?php 
+            // checks if there is a value. for handling errors as well
+                if(isset($_SESSION["greetings"])){
+                    foreach($_SESSION["greetings"] as $greeting){
+                        echo "<li>" . $greeting . "</li>";
+                    }
+                }
+            ?>
+        </ul>
+    </form>
+</body>
+</html>
